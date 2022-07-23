@@ -38,8 +38,8 @@ VALUES
   ('Cabinet of fools', 5, 2012),
   ('No guarantees', 5, 2015),
   ('Apparatus', 6, 2015);
-
- CREATE TABLE SpotifyClone.musicas (
+  
+  CREATE TABLE SpotifyClone.musicas (
     musica_id INT PRIMARY KEY AUTO_INCREMENT,
     musica VARCHAR(80) NOT NULL,
     album_id INT NOT NULL,
@@ -93,7 +93,7 @@ VALUES
   ("Wouldn't It Be Nice", 10, 6, 213),
   ('Baby', 10, 6, 136),
   ('You Make Me Feel So..', 10, 6, 83);
-
+  
   CREATE TABLE SpotifyClone.pagamento (
     plano_id INT PRIMARY KEY AUTO_INCREMENT,
     plano VARCHAR(20) NOT NULL,
@@ -106,7 +106,7 @@ VALUES
   ('familiar', 7.99),
   ('universitario', 5.99),
   ('pessoal', 6.99);
-
+  
     CREATE TABLE SpotifyClone.usuarios (
     usuario_id INT PRIMARY KEY AUTO_INCREMENT,
     usuario VARCHAR(20) NOT NULL,
@@ -129,8 +129,7 @@ VALUES
   ('Carol', 19, '2018-02-14', 3),
   ('Angelina', 42, '2018-04-29', 2),
   ('Paul', 46, '2017-01-17', 2);
-
- 
+  
 CREATE TABLE SpotifyClone.historico (
     usuario_id INT NOT NULL,
     musica_id INT NOT NULL,
@@ -180,11 +179,11 @@ VALUES
   (10, 21, '2017-12-04 05:33:43'),
   (10, 12, '2017-07-27 05:24:49'),
   (10, 13, '2017-12-25 01:03:57');
-
+  
 CREATE TABLE SpotifyClone.follow_list (
-    follow_id INT PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT NOT NULL,
     artista_id INT NOT NULL,
+    CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
 	FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.usuarios (usuario_id),
 	FOREIGN KEY (artista_id) REFERENCES SpotifyClone.artistas (artista_id)
 )  ENGINE=INNODB;
