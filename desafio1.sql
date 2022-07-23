@@ -93,3 +93,16 @@ VALUES
   ("Wouldn't It Be Nice", 10, 6, 213),
   ('Baby', 10, 6, 136),
   ('You Make Me Feel So..', 10, 6, 83);
+
+  CREATE TABLE SpotifyClone.pagamento (
+    plano_id INT PRIMARY KEY AUTO_INCREMENT,
+    plano VARCHAR(20) NOT NULL,
+    valor_plano DECIMAL(5,2) NOT NULL
+)  ENGINE=INNODB;
+
+INSERT INTO SpotifyClone.pagamento (plano, valor_plano)
+VALUES
+  ('gratuito', 0.00),
+  ('familiar', 7.99),
+  ('universitario', 5.99),
+  ('pessoal', 6.99);
