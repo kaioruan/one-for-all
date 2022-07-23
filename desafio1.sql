@@ -106,3 +106,26 @@ VALUES
   ('familiar', 7.99),
   ('universitario', 5.99),
   ('pessoal', 6.99);
+
+    CREATE TABLE SpotifyClone.usuarios (
+    usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario VARCHAR(20) NOT NULL,
+    idade INT NOT NULL,
+    data_assinatura DATE NOT NULL,
+    plano_id INT NOT NULL,
+	FOREIGN KEY (plano_id)
+		REFERENCES SpotifyClone.pagamento (plano_id)
+)  ENGINE=INNODB;
+
+INSERT INTO SpotifyClone.usuarios (usuario, idade, data_assinatura, plano_id)
+VALUES
+  ('Thati', 23, '2019-10-20', 1),
+  ('Cintia', 35, '2017-12-30', 2),
+  ('Bill', 20, '2019-06-05', 3),
+  ('Roger', 45, '2020-05-13', 4),
+  ('Norman', 58, '2017-02-17', 4),
+  ('Patrick', 33, '2017-01-06', 2),
+  ('Vivian', 26, '2018-01-05', 3),
+  ('Carol', 19, '2018-02-14', 3),
+  ('Angelina', 42, '2018-04-29', 2),
+  ('Paul', 46, '2017-01-17', 2);
