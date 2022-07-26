@@ -33,8 +33,7 @@ Para rodar a aplicação é necessário executar o comando abaixo para criar e e
 docker-compose up -d
 ```
 ---
-# Requisitos desenvolvidos no projeto:
-### Requisitos Obrigatórios:
+## Requisitos desenvolvidos no projeto:
 
 - ✅ 1. Criar um banco de dados com o nome de SpotifyClone após aplicar normalização nos dados.
 - ✅ 2. Criar uma QUERY que exiba três colunas: A primeira coluna deve exibir a quantidade total de canções, A segunda coluna deve exibir a quantidade total de artista, A terceira coluna deve exibir a quantidade de álbuns.
